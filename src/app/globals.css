@@ -1,9 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 140, 140, 140;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -17,6 +19,7 @@
 }
 
 body {
+  @apply text-gray-500 font-sans text-base font-light;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,3 +28,46 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Define your unified styles */
+
+
+h1 {
+  @apply text-xl font-bold text-orange-100 ;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+h2
+{
+  @apply text-lg font-bold text-orange-100;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+p {
+  @apply text-base 
+}
+
+a {
+  @apply text-orange-100 hover:text-orange-200;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.container {
+  @apply mx-auto p-4 md:w-2/3;
+}
+
+.card {
+  @apply p-4 my-4 bg-white rounded shadow-md;
+}
+a {
+  @apply transition-all duration-300;
+}
+.container-fluid {
+  @apply mx-auto max-w-7xl overflow-x-hidden;
+}
+
+@media (max-width: 1390px) {
+  .container-fluid {
+    @apply px-20;
+  }
+}
+
