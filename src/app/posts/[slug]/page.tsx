@@ -13,7 +13,7 @@ interface BlogPostFullProps {
   id: string;
 }
 
-const BlogPostFull: React.FC<BlogPostFullProps> = (props:any) => {
+export default function BlogPostFull (props:any) {
     const slug = props.params.slug;
     const pb = new PocketBase(process.env.url);
     const [post, setPost] = useState<BlogPost | null>(null);
@@ -60,5 +60,3 @@ const BlogPostFull: React.FC<BlogPostFullProps> = (props:any) => {
         </Box>
     );
 };
-
-export default BlogPostFull;
