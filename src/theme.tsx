@@ -1,10 +1,10 @@
 export const colors = {
-  palette: {
-    primary: {
-      main: '#7982cc',
+    palette: {
+        primary: {
+            main: '#7982cc',
+        },
+        secondary: {
+            main: '#ccc479',
+        },
     },
-    secondary: {
-      main: '#ccc479',
-    },
-  },
 };

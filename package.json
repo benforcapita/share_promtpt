@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "concurrently \"./pocketbase serve\" \"next dev\"",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "concurrently \"./pocketbase serve\" \"next start\"",
+    "lint": "next lint",
+    "pocketBase":"./pocketBase serve"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
